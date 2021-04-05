@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const squares = document.querySelectorAll('.grid div');
   const scoreDisplay = document.querySelector('span');
   const startBtn = document.querySelector('.start');
 
-  const width = 10;
+  const width = 25;
   let currentIndex = 0;
   let appleIndex = 0;
   let currentSnake = [2, 1, 0]; // 2 is head, 0 is tail, 1s are body
@@ -12,6 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
   let speed = 0.9;
   let intervalTime = 0;
   let interval = 0;
+  let gridDiv = '';
+  let borderSize = width * 20;
+
+  document.getElementById('gridContainer').innerHTML =
+    '<div class="grid" ' +
+    'style="height: ' +
+    borderSize +
+    'px; width: ' +
+    borderSize +
+    'px;"' +
+    '></div>';
+
+  for (let i = 0; i < width * width; i++) {
+    gridDiv += '<div></div>';
+  }
+  document.querySelector('.grid').innerHTML = gridDiv;
+
+  const squares = document.querySelectorAll('.grid div');
 
   // Start and restart the game
   function startGame() {
