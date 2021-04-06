@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scoreDisplay = document.querySelector('span');
   const startBtn = document.querySelector('.start');
 
-  const width = 25;
+  const width = 15;
   let currentIndex = 0;
   let appleIndex = 0;
   let currentSnake = [2, 1, 0]; // 2 is head, 0 is tail, 1s are body
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let intervalTime = 0;
   let interval = 0;
   let gridDiv = '';
-  let borderSize = width * 20;
+  let borderSize = width * 22;
 
   document.getElementById('gridContainer').innerHTML =
     '<div class="grid" ' +
@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     borderSize +
     'px;"' +
     '></div>';
+
+  // document.getElementById('gridContainer').innerHTML =
+  //   '<div class="grid"></div>';
 
   for (let i = 0; i < width * width; i++) {
     gridDiv += '<div></div>';
