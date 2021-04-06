@@ -1,20 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+body {
+  background-color: rgb(20, 150, 173);
+  font-family: 'Dela Gothic One', cursive;
+  color: #74ad5a;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+}
+
+.container h1 {
+  margin: 50px 0;
+}
+
+.start {
+  margin: 25px 0;
+  box-shadow: inset 0px 1px 0px 0px #9acc85;
+  background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+  background-color: #74ad5a;
+  border: 1px solid #3b6e22;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.start:hover {
+  background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+  background-color: #68a54b;
+}
+.start:active {
+  position: relative;
+  top: 1px;
+}
+
 .grid {
-  /* width: 200px; */
-  /* height: 200px; */
+  /* width: 220px; */
+  /* height: 220px; */
   display: flex;
   flex-wrap: wrap;
   border-style: solid;
+  margin: 40px auto;
+
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  background-color: #e2e2e2;
 }
 
 .grid div {
   width: 20px;
   height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .snake {
-  background-color: blue;
+  background-color: rgb(50, 100, 50);
 }
 
 .apple {
-  background-color: purple;
+  background-color: red;
 }
